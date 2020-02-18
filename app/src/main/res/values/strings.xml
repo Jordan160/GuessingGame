@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Guessing Game</string>
+    <string name="guessing_image_view">guessingGame</string>
+    <string name="play">Play</string>
+    <string name="animalImageView">animalImageView</string>
+    <string name="settings_title">Sound:</string>
+    <string name="soundOff">Off</string>
+    <string name="soundOn">On</string>
+    <string name="sound_variable">sound</string>
+    <string name="wrong_answer_text">WRONG!</string>
+
+    <string-array name="animals">
+        <item>bat</item>
+        <item>bird</item>
+        <item>cat</item>
+        <item>dog</item>
+        <item>elephant</item>
+        <item>fish</item>
+        <item>flamingo</item>
+        <item>giraffe</item>
+        <item>goat</item>
+        <item>horse</item>
+        <item>jellyfish</item>
+        <item>lion</item>
+        <item>otter</item>
+        <item>penguin</item>
+        <item>polarbear</item>
+        <item>shark</item>
+        <item>snake</item>
+        <item>squirrel</item>
+        <item>turtle</item>
+        <item>wolf</item>
+    </string-array>
+</resources>
