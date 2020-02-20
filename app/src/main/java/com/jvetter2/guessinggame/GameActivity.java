@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
@@ -27,6 +28,7 @@ public class GameActivity extends AppCompatActivity {
     int questionNumber;
     Double currentScore;
     Double totalNumber;
+    ArrayList<Integer> excludeNumbers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class GameActivity extends AppCompatActivity {
         currentScore = 0.0;
         totalNumber = 10.0;
         questionNumber = 1;
+        excludeNumbers = new ArrayList<>();
 
         Intent intent = getIntent();
         soundOn = intent.getBooleanExtra(getString(R.string.sound_variable), true);
@@ -62,6 +65,12 @@ public class GameActivity extends AppCompatActivity {
         // Calculate correct answer number
         Random random = new Random();
         correctAnswer = random.nextInt(animalList.length);
+
+        while (!excludeNumbers.isEmpty() && excludeNumbers.contains(correctAnswer)) {
+            correctAnswer = random.nextInt(animalList.length);
+        }
+
+        excludeNumbers.add(correctAnswer);
     }
 
     public void setCorrectButton() {
